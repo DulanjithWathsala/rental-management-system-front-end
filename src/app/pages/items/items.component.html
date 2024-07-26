@@ -1,0 +1,38 @@
+<div class="container d-flex flex-row mt-3">
+    <div class="col-sm-6 col-lg-6">
+        <img src="../../../assets/item.jpg" class="img-fluid" alt="">
+    </div>
+    <div class="col-sm-6 col-lg-6 px-5">
+        <div class="mb-3">
+            <label class="form-label">Item Name</label>
+            <input type="text" class="form-control" placeholder="Drill" [(ngModel)]="Item.name">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Rental Per Day</label>
+            <input type="number" class="form-control" placeholder="10" [(ngModel)]="Item.rentalPerDay">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Fine Per Day</label>
+            <input type="number" class="form-control" placeholder="2" [(ngModel)]="Item.finePerDay">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Availability</label>
+            <select class="form-select" aria-label="Default select example" [(ngModel)]="Item.availabilty">
+                <option value="true">Available</option>
+                <option value="false">Not available</option>
+            </select>
+        </div>
+
+        <div>
+            <button class="btn btn-success me-4" (click)="addItem()">Add</button>
+            <button class="btn btn-info me-4">Update</button>
+            <button class="btn btn-danger me-4" (click)="deleteItem()">Delete</button>
+            <button class="btn btn-secondary me-4">Search</button>
+        </div>
+
+    </div>
+
+</div>
